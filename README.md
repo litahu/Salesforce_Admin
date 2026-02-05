@@ -1,2 +1,2 @@
-# *Programa Salesforce Admin + Agent Force*
-📲 Presento 4 proyectos donde resuelvo desafíos de negocio complejos integrando flujos avanzados, arquitectura de seguridad de datos y el potencial de la IA con Agentforce.
+# **Programa Salesforce Admin + Agent Force**
+📁 4 proyectos, 4 soluciones: Automatización de flujos complejos, gestión de seguridad de datos y la nueva era de la IA aplicada a desafíos reales de negocio.
