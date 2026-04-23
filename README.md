@@ -1,4 +1,4 @@
-# 🧰 **"VitalCore CRM" - Implementación Salesforce**
+# 💊 **"VitalCore CRM" - Implementación Salesforce**
 
 ### **Construido con 🛠️** <br>
 - **Viewer** : Relevo de requerimientos junto a áreas comerciales y técnicas. [Ver](https://vita-murex.vercel.app/)<br>
@@ -410,6 +410,10 @@ Account (Hospital / Clínica)
 
 <p align="center">
   <kbd> <img width="800" alt="eer" src="https://github.com/litahu/Salesforce_Admin/blob/main/resource_sfadmin/sprint3_adminsales.PNG"></kbd> <br>
+</p>
+
+<p align="center">
+  <a href="https://drive.google.com/file/d/1CotmTgXQKgvfI75MK0KpXVGWM8ugF24I/view?usp=sharing" style="font-size:18px; font-weight:bold;">🔗 Ver demo</a>
 </p>
 
 <br>
