@@ -234,7 +234,6 @@ Lideré la definición de historias de usuario para implementar soluciones end-t
 ```  
 
 </details>
-<br>
  
 ### Sprint 3 — Reportes y Tableros de Gestión
 
@@ -293,8 +292,7 @@ Lideré la definición de historias de usuario para implementar soluciones end-t
 ```  
 
 </details>
-<br>
- 
+
 ### Sprint 4 — Portal Interactivo en Experience Cloud
 <details>
   <summary> Haga clic para ver la consulta </summary>
