@@ -13,8 +13,6 @@ Este proyecto demuestra el ciclo completo de una implementación Salesforce: des
 
 El proyecto fue desarrollado en 4 Sprints reales siguiendo buenas prácticas de configuración declarativa en Salesforce:
 - [ETAPA 0: Enunciado del problema](https://github.com/litahu/Salesforce_Admin?tab=readme-ov-file#etapa-0-enunciado-del-problema)
-  - [Descripción del Proyecto](https://github.com/litahu/Salesforce_Admin?tab=readme-ov-file#descripción-del-proyecto)
-  - [Levantamiento de requerimientos](https://github.com/litahu/Salesforce_Admin?tab=readme-ov-file#levantamiento-de-requerimientos)
 - [ETAPA 1: Construcción en Developer Org](https://github.com/litahu/Salesforce_Admin?tab=readme-ov-file#etapa-1-construcción-en-developer-org)
 - [ETAPA 2: Migración, calidad de datos y reportería](https://github.com/litahu/Salesforce_Admin?tab=readme-ov-file#etapa-2-migración,-calidad-de-datos-y-reportería)
 - [ETAPA 3: Automatización y reportería](https://github.com/litahu/Salesforce_Admin?tab=readme-ov-file#etapa-3-automatización-y-reportería)
@@ -151,6 +149,11 @@ Lideré la definición de historias de usuario para implementar soluciones end-t
 
 ### Sprint 2 — Carga Masiva de Datos y Automatización
 
+<details>
+  <summary> Haga clic para ver la consulta </summary>
+    <br> 
+
+```
 #### Épica 3: Migración Masiva de Datos Históricos
 
 ---
@@ -229,11 +232,18 @@ Lideré la definición de historias de usuario para implementar soluciones end-t
 **🛠️ Herramientas utilizadas:** Data Loader · Screen Flow · Record-Triggered Flow · Scheduled Flow · Matching Rules · Duplicate Rules
 
 ---
- 
+```  
+
+</details>
 <br>
  
 ### Sprint 3 — Reportes y Tableros de Gestión
 
+<details>
+  <summary> Haga clic para ver la consulta </summary>
+    <br> 
+
+```
 #### Épica 5: Inteligencia Comercial — Reportes y Tableros
 
 ---
@@ -281,11 +291,17 @@ Lideré la definición de historias de usuario para implementar soluciones end-t
 **🛠️ Herramientas utilizadas:** Report Builder · Dashboard Builder · Report Types personalizados · Filtros de reporte · Sharing Settings
 
 ---
- 
+```  
+
+</details>
 <br>
  
 ### Sprint 4 — Portal Interactivo en Experience Cloud
+<details>
+  <summary> Haga clic para ver la consulta </summary>
+    <br> 
 
+```
 #### Épica 6: Portal del Paciente en Experience Cloud
 
 ---
@@ -347,9 +363,9 @@ Lideré la definición de historias de usuario para implementar soluciones end-t
 **🛠️ Herramientas utilizadas:** Experience Cloud · Experience Builder · Screen Flow (público) · Salesforce Knowledge · Guest User Profile · LWR Template · Sharing Rules
 
 ---
+```  
 
-
-
+</details>
 <br>
   
 ## 📁**ETAPA 1: Construcción en Developer Org**
