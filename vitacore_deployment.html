@@ -1,0 +1,686 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --vc-blue:#005b96;--vc-green:#28a745;--vc-gray:#f4f6f9;
+    --vc-blue-light:#e6f1fb;--vc-green-light:#eaf3de;
+    --font:Sora,sans-serif;--mono:JetBrains Mono,monospace;
+  }
+  body{font-family:var(--font);background:transparent;color:var(--color-text-primary)}
+  .readme{max-width:680px;margin:0 auto;padding:1.5rem 0}
+
+  .badge-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:1.5rem}
+  .badge{font-family:var(--mono);font-size:11px;padding:3px 10px;border-radius:999px;font-weight:500}
+  .badge-blue{background:#005b9618;color:#005b96;border:0.5px solid #005b9640}
+  .badge-green{background:#28a74518;color:#28a745;border:0.5px solid #28a74540}
+  .badge-gray{background:var(--color-background-secondary);color:var(--color-text-secondary);border:0.5px solid var(--color-border-tertiary)}
+
+  .hero{border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1.5rem;margin-bottom:1.5rem;background:var(--color-background-primary)}
+  .hero-header{display:flex;align-items:center;gap:14px;margin-bottom:1rem}
+  .logo-circle{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#005b96,#28a745);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .logo-text{color:#fff;font-weight:600;font-size:13px;letter-spacing:0.5px}
+  .hero-title{font-size:20px;font-weight:600;line-height:1.2}
+  .hero-sub{font-size:13px;color:var(--color-text-secondary);margin-top:3px}
+  .hero-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:1rem}
+  .hero-card{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:10px 12px}
+  .hero-card-label{font-size:11px;color:var(--color-text-secondary);margin-bottom:3px;font-family:var(--mono);text-transform:uppercase;letter-spacing:0.5px}
+  .hero-card-val{font-size:13px;font-weight:500;color:var(--color-text-primary)}
+
+  .section{margin-bottom:1.5rem}
+  .section-title{font-size:13px;font-family:var(--mono);text-transform:uppercase;letter-spacing:1px;color:var(--color-text-secondary);margin-bottom:10px;padding-bottom:6px;border-bottom:0.5px solid var(--color-border-tertiary)}
+
+  .case-block{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1.25rem;margin-bottom:0.75rem}
+  .case-block p{font-size:14px;line-height:1.7;color:var(--color-text-secondary);margin-top:6px}
+  .case-label{font-size:11px;font-weight:500;font-family:var(--mono);color:#005b96;text-transform:uppercase;letter-spacing:0.5px}
+  .case-title{font-size:15px;font-weight:500;color:var(--color-text-primary);margin-top:2px}
+
+  .sprint-tabs{display:flex;gap:6px;margin-bottom:1rem;flex-wrap:wrap}
+  .stab{padding:6px 14px;border-radius:999px;font-size:12px;font-weight:500;font-family:var(--mono);cursor:pointer;border:0.5px solid var(--color-border-tertiary);background:var(--color-background-secondary);color:var(--color-text-secondary);transition:all 0.15s}
+  .stab.active{background:#005b96;color:#fff;border-color:#005b96}
+  .sprint-panel{display:none}
+  .sprint-panel.show{display:block}
+
+  .epic{margin-bottom:1.25rem}
+  .epic-header{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+  .epic-pill{font-family:var(--mono);font-size:10px;font-weight:500;padding:2px 8px;border-radius:999px;background:#005b9618;color:#005b96;border:0.5px solid #005b9630;white-space:nowrap}
+  .epic-name{font-size:14px;font-weight:500}
+
+  .hu-card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:1rem 1.1rem;margin-bottom:8px;transition:border-color 0.15s;cursor:pointer}
+  .hu-card:hover{border-color:var(--color-border-secondary)}
+  .hu-card.open .hu-body{display:block}
+  .hu-header{display:flex;align-items:flex-start;gap:10px}
+  .hu-id{font-family:var(--mono);font-size:11px;font-weight:500;padding:2px 7px;border-radius:6px;background:var(--color-background-secondary);color:var(--color-text-secondary);flex-shrink:0;margin-top:2px}
+  .hu-title{font-size:13px;font-weight:500;line-height:1.4}
+  .hu-role{font-size:11px;color:var(--color-text-secondary);margin-top:2px}
+  .hu-chevron{margin-left:auto;font-size:10px;color:var(--color-text-secondary);transition:transform 0.2s;flex-shrink:0;margin-top:2px}
+  .hu-card.open .hu-chevron{transform:rotate(180deg)}
+  .hu-body{display:none;margin-top:10px;padding-top:10px;border-top:0.5px solid var(--color-border-tertiary)}
+  .hu-story{font-size:13px;line-height:1.7;color:var(--color-text-secondary);margin-bottom:8px}
+  .hu-story strong{color:var(--color-text-primary);font-weight:500}
+  .ac-title{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:0.5px;color:var(--color-text-secondary);margin-bottom:6px}
+  .ac-list{list-style:none;padding:0}
+  .ac-list li{font-size:12px;line-height:1.6;color:var(--color-text-secondary);padding:3px 0;display:flex;gap:7px;align-items:flex-start}
+  .ac-check{color:#28a745;flex-shrink:0;margin-top:2px;font-size:11px}
+
+  .data-model{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin-top:8px}
+  .obj-card{background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:10px 12px}
+  .obj-name{font-family:var(--mono);font-size:12px;font-weight:500;color:#005b96;margin-bottom:4px}
+  .obj-fields{list-style:none;padding:0}
+  .obj-fields li{font-size:11px;color:var(--color-text-secondary);padding:1px 0;display:flex;align-items:center;gap:5px}
+  .field-dot{width:5px;height:5px;border-radius:50%;background:#28a745;flex-shrink:0}
+  .field-key{width:5px;height:5px;border-radius:50%;background:#005b96;flex-shrink:0}
+
+  .impact-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .impact-item{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:10px 14px;border-left:2px solid #005b96}
+  .impact-item.green{border-left-color:#28a745}
+  .impact-num{font-size:22px;font-weight:600;color:#005b96}
+  .impact-item.green .impact-num{color:#28a745}
+  .impact-desc{font-size:12px;color:var(--color-text-secondary);margin-top:2px;line-height:1.5}
+
+  .tool-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+  .tool-tag{font-family:var(--mono);font-size:11px;padding:3px 10px;border-radius:6px;background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);color:var(--color-text-secondary)}
+
+  .flow-steps{display:flex;flex-direction:column;gap:6px;margin-top:8px}
+  .flow-step{display:flex;align-items:flex-start;gap:10px}
+  .step-num{width:22px;height:22px;border-radius:50%;background:#005b96;color:#fff;font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+  .step-text{font-size:13px;line-height:1.6;color:var(--color-text-secondary)}
+  .step-text strong{color:var(--color-text-primary);font-weight:500}
+
+  .divider{border:none;border-top:0.5px solid var(--color-border-tertiary);margin:1.25rem 0}
+</style>
+
+<div class="readme">
+
+  <div class="badge-row">
+    <span class="badge badge-blue">Salesforce</span>
+    <span class="badge badge-green">Salud / Farma</span>
+    <span class="badge badge-gray">4 Sprints</span>
+    <span class="badge badge-gray">Experience Cloud</span>
+    <span class="badge badge-gray">Simulación End-to-End</span>
+  </div>
+
+  <div class="hero">
+    <div class="hero-header">
+      <div class="logo-circle"><span class="logo-text">VC</span></div>
+      <div>
+        <div class="hero-title">VitaCore CRM — Implementación Salesforce</div>
+        <div class="hero-sub">Proyecto de automatización y digitalización comercial para VitaCore Labs</div>
+      </div>
+    </div>
+    <div class="hero-grid">
+      <div class="hero-card">
+        <div class="hero-card-label">Industria</div>
+        <div class="hero-card-val">Salud & Farmacéutica</div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-label">Rol</div>
+        <div class="hero-card-val">Salesforce Jr. Admin</div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-label">Entorno</div>
+        <div class="hero-card-val">Developer Org (Sim.)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Contexto del Proyecto</div>
+    <div class="case-block">
+      <div class="case-label">Industria</div>
+      <div class="case-title">Sector Salud — Laboratorio Farmacéutico B2B</div>
+      <p>VitaCore Labs es un laboratorio farmacéutico que opera con un equipo de visitadores médicos responsables de gestionar relaciones con clínicas, hospitales y médicos especialistas a lo largo del territorio.</p>
+    </div>
+    <div class="case-block">
+      <div class="case-label">El Desafío</div>
+      <div class="case-title">Operación dispersa, sin visibilidad ni automatización</div>
+      <p>El cliente necesitaba centralizar la gestión comercial, eliminar el registro manual de visitas médicas y obtener visibilidad en tiempo real sobre el desempeño del equipo de campo y la cobertura de médicos.</p>
+    </div>
+    <div class="case-block">
+      <div class="case-label">La Solución</div>
+      <div class="case-title">CRM personalizado + Experience Cloud para autoservicio</div>
+      <p>Implementación de Sales Cloud con objetos personalizados para visitas médicas, automatización de flujos con Screen Flows y Flow Builder, carga masiva de datos históricos, tableros de gestión y un portal interactivo para pacientes en Experience Cloud.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Modelo de Datos Principal</div>
+    <div class="data-model">
+      <div class="obj-card">
+        <div class="obj-name">Account</div>
+        <ul class="obj-fields">
+          <li><span class="field-key"></span> Hospital / Clínica</li>
+          <li><span class="field-dot"></span> Tipo institución</li>
+          <li><span class="field-dot"></span> Ciudad / Región</li>
+          <li><span class="field-dot"></span> Propietario</li>
+        </ul>
+      </div>
+      <div class="obj-card">
+        <div class="obj-name">Contact</div>
+        <ul class="obj-fields">
+          <li><span class="field-key"></span> Médico especialista</li>
+          <li><span class="field-dot"></span> Especialidad</li>
+          <li><span class="field-dot"></span> Últ. fecha visita</li>
+          <li><span class="field-dot"></span> Hospital (lookup)</li>
+        </ul>
+      </div>
+      <div class="obj-card">
+        <div class="obj-name">Visita Médica__c</div>
+        <ul class="obj-fields">
+          <li><span class="field-key"></span> Objeto personalizado</li>
+          <li><span class="field-dot"></span> Médico visitado</li>
+          <li><span class="field-dot"></span> Producto ofrecido</li>
+          <li><span class="field-dot"></span> Estado visita</li>
+          <li><span class="field-dot"></span> Comentarios</li>
+        </ul>
+      </div>
+      <div class="obj-card">
+        <div class="obj-name">Producto Farma__c</div>
+        <ul class="obj-fields">
+          <li><span class="field-key"></span> Objeto personalizado</li>
+          <li><span class="field-dot"></span> Nombre comercial</li>
+          <li><span class="field-dot"></span> Categoría</li>
+          <li><span class="field-dot"></span> Principio activo</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Sprints del Proyecto</div>
+    <div class="sprint-tabs">
+      <div class="stab active" onclick="switchSprint(0)">Sprint 1</div>
+      <div class="stab" onclick="switchSprint(1)">Sprint 2</div>
+      <div class="stab" onclick="switchSprint(2)">Sprint 3</div>
+      <div class="stab" onclick="switchSprint(3)">Sprint 4</div>
+    </div>
+
+    <div class="sprint-panel show" id="sp0">
+      <div class="epic">
+        <div class="epic-header">
+          <span class="epic-pill">ÉPICA 1</span>
+          <span class="epic-name">Identidad y Experiencia VitaCore CRM</span>
+        </div>
+        <div class="hu-card" onclick="toggleHU(this)">
+          <div class="hu-header">
+            <span class="hu-id">HU-01</span>
+            <div>
+              <div class="hu-title">App personalizada VitaCore CRM</div>
+              <div class="hu-role">Visitador Médico</div>
+            </div>
+            <span class="hu-chevron">▼</span>
+          </div>
+          <div class="hu-body">
+            <div class="hu-story"><strong>Como</strong> Visitador Médico, <strong>quiero</strong> ingresar a Salesforce mediante una app propia llamada "VitaCore CRM" <strong>para</strong> trabajar únicamente con las herramientas relevantes a mi rol.</div>
+            <div class="ac-title">Criterios de aceptación</div>
+            <ul class="ac-list">
+              <li><span class="ac-check">✓</span>Existe una Lightning App llamada VitaCore CRM visible solo para el equipo de ventas.</li>
+              <li><span class="ac-check">✓</span>Apps estándar (Sales / Service) están ocultas para usuarios no administradores.</li>
+              <li><span class="ac-check">✓</span>La app incluye pestañas: Cuentas, Contactos, Productos Farma, Visitas Médicas.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="hu-card" onclick="toggleHU(this)">
+          <div class="hu-header">
+            <span class="hu-id">HU-02</span>
+            <div>
+              <div class="hu-title">Identidad corporativa aplicada en Salesforce</div>
+              <div class="hu-role">Colaborador VitaCore Labs</div>
+            </div>
+            <span class="hu-chevron">▼</span>
+          </div>
+          <div class="hu-body">
+            <div class="hu-story"><strong>Como</strong> colaborador de VitaCore Labs, <strong>quiero</strong> que Salesforce refleje nuestra identidad visual <strong>para</strong> sentir que es un sistema propio, profesional y confiable.</div>
+            <div class="ac-title">Criterios de aceptación</div>
+            <ul class="ac-list">
+              <li><span class="ac-check">✓</span>Tema configurado con: Azul VitaCore #005b96, Verde Salud #28a745, Gris Neutro #f4f6f9.</li>
+              <li><span class="ac-check">✓</span>Barra de navegación con colores corporativos e interfaz visual consistente.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="epic">
+        <div class="epic-header">
+          <span class="epic-pill">ÉPICA 2</span>
+          <span class="epic-name">Modelado de Datos del Negocio</span>
+        </div>
+        <div class="hu-card" onclick="toggleHU(this)">
+          <div class="hu-header">
+            <span class="hu-id">HU-03</span>
+            <div>
+              <div class="hu-title">Gestión de Hospitales y Clínicas (Cuentas)</div>
+              <div class="hu-role">Visitador Médico</div>
+            </div>
+            <span class="hu-chevron">▼</span>
+          </div>
+          <div class="hu-body">
+            <div class="hu-story"><strong>Como</strong> Visitador Médico, <strong>quiero</strong> registrar Hospitales y Clínicas como Cuentas <strong>para</strong> centralizar la información institucional y tener visibilidad de mis clientes.</div>
+            <div class="ac-title">Criterios de aceptación</div>
+            <ul class="ac-list">
+              <li><span class="ac-check">✓</span>Las Cuentas representan Hospitales y Clínicas con tipo de registro diferenciado.</li>
+              <li><span class="ac-check">✓</span>Todas las Cuentas tienen propietario asignado.</li>
+              <li><span class="ac-check">✓</span>Un Visitador Médico puede ser dueño de sus propias cuentas.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="hu-card" onclick="toggleHU(this)">
+          <div class="hu-header">
+            <span class="hu-id">HU-04</span>
+            <div>
+              <div class="hu-title">Registro de Médicos como Contactos</div>
+              <div class="hu-role">Visitador Médico</div>
+            </div>
+            <span class="hu-chevron">▼</span>
+          </div>
+          <div class="hu-body">
+            <div class="hu-story"><strong>Como</strong> Visitador Médico, <strong>quiero</strong> registrar a los médicos como Contactos vinculados a sus instituciones <strong>para</strong> gestionar mi cartera de especialistas de forma centralizada.</div>
+            <div class="ac-title">Criterios de aceptación</div>
+            <ul class="ac-list">
+              <li><span class="ac-check">✓</span>Campo Especialidad Médica (picklist) en el objeto Contacto.</li>
+              <li><span class="ac-check">✓</span>Campo Fecha de Última Visita (date) visible en el layout.</li>
+              <li><span class="ac-check">✓</span>Contacto vinculado a una Cuenta (hospital/clínica) mediante lookup.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="hu-card" onclick="toggleHU(this)">
+          <div class="hu-header">
+            <span class="hu-id">HU-05</span>
+            <div>
+              <div class="hu-title">Objeto personalizado: Visita Médica</div>
+              <div class="hu-role">Visitador Médico</div>
+            </div>
+            <span class="hu-chevron">▼</span>
+          </div>
+          <div class="hu-body">
+            <div class="hu-story"><strong>Como</strong> Visitador Médico, <strong>quiero</strong> registrar mis visitas con toda la información relevante <strong>para</strong> mantener un historial completo de interacciones con cada médico.</div>
+            <div class="ac-title">Criterios de aceptación</div>
+            <ul class="ac-list">
+              <li><span class="ac-check">✓</span>Objeto Visita_Medica__c creado con campos: Médico (lookup Contact), Fecha, Producto Ofrecido (lookup), Estado (picklist: Planificada/Ejecutada/Vencida), Comentarios (long text).</li>
+              <li><span class="ac-check">✓</span>Layout de página configurado y asignado al perfil de Visitador Médico.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="hu-card" onclick="toggleHU(this)">
+          <div class="hu-header">
+            <span class="hu-id">HU-06</span>
+            <div>
+              <div class="hu-title">Perfiles, Roles y Permisos</div>
+              <div class="hu-role">Equipo de implementación</div>
+            </div>
+            <span class="hu-chevron">▼</span>
+          </div>
+          <div class="hu-body">
+            <div class="hu-story"><strong>Como</strong> equipo de implementación, <strong>quiero</strong> definir perfiles y roles diferenciados <strong>para</strong> que cada usuario acceda solo a lo que necesita según su función.</div>
+            <div class="ac-title">Criterios de aceptación</div>
+            <ul class="ac-list">
+              <li><span class="ac-check">✓</span>Perfil "Visitador Médico" con acceso limitado a objetos del CRM.</li>
+              <li><span class="ac-check">✓</span>Perfil "Gerencia" con acceso a reportes y tableros.</li>
+              <li><span class="ac-check">✓</span>Jerarquía de roles configurada (Dirección > Gerencia Comercial > Visitador).</li>
+              <li><span class="ac-check">✓</span>Permission Sets para accesos adicionales puntuales.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="tool-row">
+        <span class="tool-tag">Lightning App Builder</span>
+        <span class="tool-tag">Profile Manager</span>
+        <span class="tool-tag">Object Manager</span>
+        <span class="tool-tag">Page Layout Editor</span>
+        <span class="tool-tag">Themes & Branding</span>
+      </div>
+    </div>
+
+    <div class="sprint-panel" id="sp1">
+      <div class="epic">
+        <div class="epic-header">
+          <span class="epic-pill">ÉPICA 3</span>
+          <span class="epic-name">Migración Masiva de Datos Históricos</span>
+        </div>
+        <div class="hu-card" onclick="toggleHU(this)">
+          <div class="hu-header">
+            <span class="hu-id">HU-07</span>
+            <div>
+              <div class="hu-title">Carga masiva de clínicas y médicos desde CSV</div>
+              <div class="hu-role">Dr. Alejandro Vargas (COO)</div>
+            </div>
+            <span class="hu-chevron">▼</span>
+          </div>
+          <div class="hu-body">
+            <div class="hu-story"><strong>Como</strong> COO de VitaCore Labs, <strong>quiero</strong> que el historial del archivo "Maestro_Historico_2025.csv" sea importado al CRM <strong>para</strong> no comenzar desde cero y contar con el contexto del último año desde el día uno.</div>
+            <div class="ac-title">Criterios de aceptación</div>
+            <ul class="ac-list">
+              <li><span class="ac-check">✓</span>Mapeo de columnas CSV: Cuenta (hospital), Contacto (médico), Visita Médica (historial).</li>
+              <li><span class="ac-check">✓</span>Carga realizada con Data Loader en orden: Accounts → Contacts → Visitas.</li>
+              <li><span class="ac-check">✓</span>Cero duplicados gracias a reglas de duplicación configuradas en Salesforce.</li>
+              <li><span class="ac-check">✓</span>Cada médico queda vinculado automáticamente a su hospital correspondiente.</li>
+              <li><span class="ac-check">✓</span>Prueba inicial realizada en Developer Org antes de carga definitiva.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="hu-card" onclick="toggleHU(this)">
+          <div class="hu-header">
+            <span class="hu-id">HU-08</span>
+            <div>
+              <div class="hu-title">Reglas de deduplicación y calidad de datos</div>
+              <div class="hu-role">Equipo de implementación</div>
+            </div>
+            <span class="hu-chevron">▼</span>
+          </div>
+          <div class="hu-body">
+            <div class="hu-story"><strong>Como</strong> equipo de implementación, <strong>quiero</strong> configurar reglas de duplicados y matching <strong>para</strong> garantizar que los datos históricos y futuros ingresen limpios y sin repeticiones.</div>
+            <div class="ac-title">Criterios de aceptación</div>
+            <ul class="ac-list">
+              <li><span class="ac-check">✓</span>Matching Rules configuradas para Cuentas (nombre institución) y Contactos (nombre + email).</li>
+              <li><span class="ac-check">✓</span>Duplicate Rules en modo "Bloquear" para registros idénticos.</li>
+              <li><span class="ac-check">✓</span>Reporte de errores de Data Loader revisado y resuelto antes de aprobar la carga.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="epic">
+        <div class="epic-header">
+          <span class="epic-pill">ÉPICA 4</span>
+          <span class="epic-name">Automatización de Procesos</span>
+        </div>
+        <div class="hu-card" onclick="toggleHU(this)">
+          <div class="hu-header">
+            <span class="hu-id">HU-09</span>
+            <div>
+              <div class="hu-title">"Botón de pánico" para registro rápido de visitas</div>
+              <div class="hu-role">Visitador Médico</div>
+            </div>
+            <span class="hu-chevron">▼</span>
+          </div>
+          <div class="hu-body">
+            <div class="hu-story"><strong>Como</strong> Visitador Médico, <strong>quiero</strong> un asistente simple de 3 pasos para registrar una visita desde mi celular <strong>para</strong> no perder tiempo navegando por pantallas cuando salgo de un consultorio.</div>
+            <div class="ac-title">Criterios de aceptación</div>
+            <ul class="ac-list">
+              <li><span class="ac-check">✓</span>Screen Flow de 3 pantallas: (1) ¿A quién visité? → lookup Contacto. (2) ¿Qué le ofrecí? → lookup Producto Farma. (3) ¿Cómo me fue? → campo Resultado/Comentarios.</li>
+              <li><span class="ac-check">✓</span>Al guardar, el Flow crea automáticamente el registro en Visita_Medica__c.</li>
+              <li><span class="ac-check">✓</span>Botón visible en la Home Page y accesible desde la app móvil de Salesforce.</li>
+              <li><span class="ac-check">✓</span>Testeado en Salesforce Mobile App con usuarios de perfil Visitador Médico.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="hu-card" onclick="toggleHU(this)">
+          <div class="hu-header">
+            <span class="hu-id">HU-10</span>
+            <div>
+              <div class="hu-title">Actualización automática de "Fecha de Última Visita"</div>
+              <div class="hu-role">Dr. Alejandro Vargas (COO)</div>
+            </div>
+            <span class="hu-chevron">▼</span>
+          </div>
+          <div class="hu-body">
+            <div class="hu-story"><strong>Como</strong> COO de VitaCore, <strong>quiero</strong> que al guardar una visita el sistema actualice automáticamente la ficha del médico <strong>para</strong> siempre saber cuándo fue el último contacto sin buscar en el historial.</div>
+            <div class="ac-title">Criterios de aceptación</div>
+            <ul class="ac-list">
+              <li><span class="ac-check">✓</span>Record-Triggered Flow en objeto Visita_Medica__c, trigger: After Save (nuevo registro).</li>
+              <li><span class="ac-check">✓</span>El Flow navega al Contacto relacionado y actualiza Fecha_Ultima_Visita__c con la fecha actual.</li>
+              <li><span class="ac-check">✓</span>Proceso 100% automático, sin intervención del visitador.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="hu-card" onclick="toggleHU(this)">
+          <div class="hu-header">
+            <span class="hu-id">HU-11</span>
+            <div>
+              <div class="hu-title">Guardián de los Lunes: auditoría programada</div>
+              <div class="hu-role">Dr. Alejandro Vargas (COO)</div>
+            </div>
+            <span class="hu-chevron">▼</span>
+          </div>
+          <div class="hu-body">
+            <div class="hu-story"><strong>Como</strong> COO de VitaCore, <strong>quiero</strong> que cada lunes a las 8:00 AM el sistema revise visitas pendientes de la semana anterior <strong>para</strong> marcarlas como vencidas automáticamente y mantener la agenda limpia.</div>
+            <div class="ac-title">Criterios de aceptación</div>
+            <ul class="ac-list">
+              <li><span class="ac-check">✓</span>Scheduled Flow configurado para ejecutarse todos los lunes a las 08:00 AM.</li>
+              <li><span class="ac-check">✓</span>El Flow filtra Visitas con Estado = "Abierto" o "Pendiente" y fecha menor a hoy - 7 días.</li>
+              <li><span class="ac-check">✓</span>Actualiza el campo Estado a "Vencida" en cada registro encontrado.</li>
+              <li><span class="ac-check">✓</span>Opcionalmente envía notificación al gerente con el conteo de visitas vencidas.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="tool-row">
+        <span class="tool-tag">Data Loader</span>
+        <span class="tool-tag">Screen Flow</span>
+        <span class="tool-tag">Record-Triggered Flow</span>
+        <span class="tool-tag">Scheduled Flow</span>
+        <span class="tool-tag">Duplicate Rules</span>
+      </div>
+    </div>
+
+    <div class="sprint-panel" id="sp2">
+      <div class="epic">
+        <div class="epic-header">
+          <span class="epic-pill">ÉPICA 5</span>
+          <span class="epic-name">Inteligencia Comercial — Reportes y Tableros</span>
+        </div>
+        <div class="hu-card" onclick="toggleHU(this)">
+          <div class="hu-header">
+            <span class="hu-id">HU-12</span>
+            <div>
+              <div class="hu-title">Tablero de Ventas para la Gerencia</div>
+              <div class="hu-role">Dr. Alejandro Vargas (COO)</div>
+            </div>
+            <span class="hu-chevron">▼</span>
+          </div>
+          <div class="hu-body">
+            <div class="hu-story"><strong>Como</strong> COO de VitaCore, <strong>quiero</strong> un tablero de ventas con métricas clave en tiempo real <strong>para</strong> tomar decisiones sin depender de informes manuales en PowerPoint.</div>
+            <div class="ac-title">Criterios de aceptación</div>
+            <ul class="ac-list">
+              <li><span class="ac-check">✓</span>Ranking de actividad: Top 5 visitadores con más visitas ejecutadas del mes (gráfico de barras).</li>
+              <li><span class="ac-check">✓</span>Cobertura de mercado: médicos registrados por especialidad (gráfico de torta/anillo).</li>
+              <li><span class="ac-check">✓</span>Producto estrella: medicamento más promocionado en visitas (gráfico de barras).</li>
+              <li><span class="ac-check">✓</span>Comparativo mensual: visitas realizadas vs. planificadas (gráfico combinado).</li>
+            </ul>
+          </div>
+        </div>
+        <div class="hu-card" onclick="toggleHU(this)">
+          <div class="hu-header">
+            <span class="hu-id">HU-13</span>
+            <div>
+              <div class="hu-title">Tablero de Auditoría de Calidad</div>
+              <div class="hu-role">Dr. Alejandro Vargas (COO)</div>
+            </div>
+            <span class="hu-chevron">▼</span>
+          </div>
+          <div class="hu-body">
+            <div class="hu-story"><strong>Como</strong> COO de VitaCore, <strong>quiero</strong> un tablero de auditoría que detecte problemas de calidad de datos <strong>para</strong> identificar y corregir el trabajo incompleto de los visitadores.</div>
+            <div class="ac-title">Criterios de aceptación</div>
+            <ul class="ac-list">
+              <li><span class="ac-check">✓</span>Reporte de visitas sin comentarios (campo Comentarios vacío).</li>
+              <li><span class="ac-check">✓</span>Reporte de visitas sin producto asociado.</li>
+              <li><span class="ac-check">✓</span>Lista de alerta: médicos sin visita en los últimos 90 días (cruce Contact + Visita).</li>
+              <li><span class="ac-check">✓</span>Todo agrupado en un tablero "Auditoría de Calidad" con acceso restringido a Gerencia.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="hu-card" onclick="toggleHU(this)">
+          <div class="hu-header">
+            <span class="hu-id">HU-14</span>
+            <div>
+              <div class="hu-title">Tablero "Mi Desempeño" para el Visitador</div>
+              <div class="hu-role">Visitador Médico</div>
+            </div>
+            <span class="hu-chevron">▼</span>
+          </div>
+          <div class="hu-body">
+            <div class="hu-story"><strong>Como</strong> Visitador Médico, <strong>quiero</strong> ver mis propias métricas de desempeño <strong>para</strong> hacer seguimiento a mis metas y saber en qué mejorar sin necesitar pedir informes a mi gerente.</div>
+            <div class="ac-title">Criterios de aceptación</div>
+            <ul class="ac-list">
+              <li><span class="ac-check">✓</span>Tablero filtrado por "Mis registros" para mostrar solo datos propios.</li>
+              <li><span class="ac-check">✓</span>KPIs: total de visitas del mes, visitas ejecutadas vs. planificadas, médicos activos en cartera.</li>
+              <li><span class="ac-check">✓</span>Accesible desde la Home Page del Visitador Médico.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="tool-row">
+        <span class="tool-tag">Report Builder</span>
+        <span class="tool-tag">Dashboard Builder</span>
+        <span class="tool-tag">Report Types personalizados</span>
+        <span class="tool-tag">Filtros de reporte</span>
+        <span class="tool-tag">Sharing Settings</span>
+      </div>
+    </div>
+
+    <div class="sprint-panel" id="sp3">
+      <div class="epic">
+        <div class="epic-header">
+          <span class="epic-pill">ÉPICA 6</span>
+          <span class="epic-name">Portal del Paciente en Experience Cloud</span>
+        </div>
+        <div class="hu-card" onclick="toggleHU(this)">
+          <div class="hu-header">
+            <span class="hu-id">HU-15</span>
+            <div>
+              <div class="hu-title">Configuración del sitio Experience Cloud VitaCore</div>
+              <div class="hu-role">Tech Lead / Equipo de implementación</div>
+            </div>
+            <span class="hu-chevron">▼</span>
+          </div>
+          <div class="hu-body">
+            <div class="hu-story"><strong>Como</strong> equipo de implementación, <strong>quiero</strong> crear y configurar un sitio en Experience Cloud <strong>para</strong> exponer datos del CRM de forma segura y ofrecer autoservicio al paciente/médico externo.</div>
+            <div class="ac-title">Criterios de aceptación</div>
+            <ul class="ac-list">
+              <li><span class="ac-check">✓</span>Sitio Experience Cloud creado con template LWR o Customer Service.</li>
+              <li><span class="ac-check">✓</span>Theme configurado con identidad visual de VitaCore (colores, logo, tipografía).</li>
+              <li><span class="ac-check">✓</span>Estructura de páginas: Home, Artículos, Formulario de Consulta, Mis Turnos.</li>
+              <li><span class="ac-check">✓</span>Perfil de usuario invitado (Guest Profile) configurado con permisos mínimos necesarios.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="hu-card" onclick="toggleHU(this)">
+          <div class="hu-header">
+            <span class="hu-id">HU-16</span>
+            <div>
+              <div class="hu-title">Formulario de consulta médica (Screen Flow público)</div>
+              <div class="hu-role">Paciente / Usuario externo</div>
+            </div>
+            <span class="hu-chevron">▼</span>
+          </div>
+          <div class="hu-body">
+            <div class="hu-story"><strong>Como</strong> paciente de VitaCore, <strong>quiero</strong> completar un formulario de consulta desde el portal sin necesitar login <strong>para</strong> solicitar información o reintegros de forma autónoma sin llamar al laboratorio.</div>
+            <div class="ac-title">Criterios de aceptación</div>
+            <ul class="ac-list">
+              <li><span class="ac-check">✓</span>Screen Flow con pantallas: (1) Datos de contacto, (2) Motivo de consulta / carga de archivo, (3) Confirmación.</li>
+              <li><span class="ac-check">✓</span>Al guardar, el Flow crea un Caso (Case) en Salesforce asignado al equipo de soporte.</li>
+              <li><span class="ac-check">✓</span>Guest User Profile tiene permiso de Create en objeto Case y de ejecutar el Flow.</li>
+              <li><span class="ac-check">✓</span>Componente "Flow" insertado en la página del portal desde Experience Builder.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="hu-card" onclick="toggleHU(this)">
+          <div class="hu-header">
+            <span class="hu-id">HU-17</span>
+            <div>
+              <div class="hu-title">Base de conocimiento (Knowledge) en el portal</div>
+              <div class="hu-role">Paciente / Usuario externo</div>
+            </div>
+            <span class="hu-chevron">▼</span>
+          </div>
+          <div class="hu-body">
+            <div class="hu-story"><strong>Como</strong> paciente de VitaCore, <strong>quiero</strong> acceder a artículos informativos sobre medicamentos y bienestar desde el portal <strong>para</strong> resolver mis dudas sin necesitar contactar al laboratorio directamente.</div>
+            <div class="ac-title">Criterios de aceptación</div>
+            <ul class="ac-list">
+              <li><span class="ac-check">✓</span>Salesforce Knowledge habilitado y configurado con al menos 2 tipos de artículo (FAQ, Instructivo).</li>
+              <li><span class="ac-check">✓</span>Artículos publicados y visibles para usuarios invitados en el portal.</li>
+              <li><span class="ac-check">✓</span>Componente de búsqueda de artículos integrado en la Home del portal.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="hu-card" onclick="toggleHU(this)">
+          <div class="hu-header">
+            <span class="hu-id">HU-18</span>
+            <div>
+              <div class="hu-title">Seguridad y permisos del usuario invitado</div>
+              <div class="hu-role">Tech Lead</div>
+            </div>
+            <span class="hu-chevron">▼</span>
+          </div>
+          <div class="hu-body">
+            <div class="hu-story"><strong>Como</strong> Tech Lead de la implementación, <strong>quiero</strong> que los permisos del Guest User Profile sean correctamente definidos <strong>para</strong> garantizar que los usuarios públicos solo puedan crear registros autorizados sin acceder a datos internos del CRM.</div>
+            <div class="ac-title">Criterios de aceptación</div>
+            <ul class="ac-list">
+              <li><span class="ac-check">✓</span>Guest Profile tiene acceso Create-only en objeto Case. Sin acceso a Account, Contact ni Visita_Medica__c.</li>
+              <li><span class="ac-check">✓</span>Field-level security revisada: solo campos necesarios del Case son visibles al invitado.</li>
+              <li><span class="ac-check">✓</span>El Screen Flow público está configurado como "Available for Guest Users" en sus propiedades.</li>
+              <li><span class="ac-check">✓</span>Prueba realizada en modo incógnito para validar el comportamiento del usuario no autenticado.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="tool-row">
+        <span class="tool-tag">Experience Cloud</span>
+        <span class="tool-tag">Experience Builder</span>
+        <span class="tool-tag">Screen Flow (público)</span>
+        <span class="tool-tag">Salesforce Knowledge</span>
+        <span class="tool-tag">Guest User Profile</span>
+        <span class="tool-tag">LWR Template</span>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+  <div class="section">
+    <div class="section-title">Impacto del Proyecto</div>
+    <div class="impact-grid">
+      <div class="impact-item">
+        <div class="impact-num">1000+</div>
+        <div class="impact-desc">Registros históricos migrados con Data Loader en carga masiva automatizada</div>
+      </div>
+      <div class="impact-item green">
+        <div class="impact-num">3</div>
+        <div class="impact-desc">Flujos automáticos eliminando tareas manuales del equipo de campo</div>
+      </div>
+      <div class="impact-item green">
+        <div class="impact-num">3</div>
+        <div class="impact-desc">Tableros de gestión: Ventas, Auditoría y Desempeño personal</div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-num">360°</div>
+        <div class="impact-desc">Visibilidad comercial en tiempo real para la dirección ejecutiva</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+  <div class="section">
+    <div class="section-title">Ciclo de entrega</div>
+    <div class="flow-steps">
+      <div class="flow-step">
+        <div class="step-num">1</div>
+        <div class="step-text"><strong>Levantamiento de requerimientos</strong> — Análisis del negocio, historias de usuario y definición del modelo de datos con el COO y el equipo comercial.</div>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">2</div>
+        <div class="step-text"><strong>Construcción en Developer Org</strong> — Configuración de objetos, perfiles, layouts y la app personalizada VitaCore CRM en entorno simulado.</div>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">3</div>
+        <div class="step-text"><strong>Migración y calidad de datos</strong> — Limpieza del archivo CSV histórico, configuración de reglas de duplicados y carga con Data Loader.</div>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">4</div>
+        <div class="step-text"><strong>Automatización y reportería</strong> — Implementación de Screen Flows, Record-Triggered Flows, Scheduled Flows y tableros de gestión.</div>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">5</div>
+        <div class="step-text"><strong>Portal Experience Cloud</strong> — Diseño e implementación del portal del paciente con formulario público, Knowledge y seguridad de usuario invitado.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function switchSprint(idx){
+  document.querySelectorAll('.stab').forEach((t,i)=>t.classList.toggle('active',i===idx));
+  document.querySelectorAll('.sprint-panel').forEach((p,i)=>p.classList.toggle('show',i===idx));
+}
+function toggleHU(card){
+  card.classList.toggle('open');
+}
+</script>
