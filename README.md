@@ -45,10 +45,10 @@ con Screen Flows y Flow Builder, carga masiva de datos históricos, tableros de 
 Lideré la definición de historias de usuario para implementar soluciones end-to-end bajo un enfoque ágil
 
 
-**Sprint 1 — Identidad, Modelo de Datos y Gestión de Usuarios**
----
+### Sprint 1 — Identidad, Modelo de Datos y Gestión de Usuarios
 
 #### Épica 1: Identidad y Experiencia VitaCore CRM
+
 ---
 
 **HU-01: App personalizada VitaCore CRM**
