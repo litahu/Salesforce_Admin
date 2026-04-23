@@ -1,22 +1,27 @@
-# **"VitalCore CRM" - Implementación Salesforce**
+# 🧰 **"VitalCore CRM" - Implementación Salesforce**
 
 Este proyecto demuestra el ciclo completo de una implementación Salesforce: desde el levantamiento de requerimientos y el modelado de datos, hasta la automatización de procesos, la inteligencia comercial con reportes y tableros, y la apertura al mundo exterior mediante un portal interactivo en Experience Cloud para VitaCore Labs.<br>
 
-## **🧰 Stack Tecnológico aplicados** <br>
+### **Stack Tecnológico aplicados** <br>
 - **Salesforce Sales Cloud** : Object Manger, Lightning App Builder, Profile Manager, Page Layout Editor, Flow Builder, Data Loader, Report Builder y Themes & Branding. [Ver](https://www.salesforce.com/trailblazer/litahume)<br>
 
 - **Salesforce Experience Cloud** : Experience Builder, Salesforce Knowledge, Guest User Profile, Omnicanalidad y Screen Flow público integrado al portal. [Ver](https://trailhead.salesforce.com/es-MX/content/learn/projects/build-a-community-with-knowledge-and-chat)<br>
 
 - **Viewer** : Relevo de requerimientos junto a áreas comerciales y técnicas.[Ver](https://vita-murex.vercel.app/)<br>
-
-## Tabla de contenido <!-- omit in toc -->
+  
+<br>
+  
+### Tabla de contenido <!-- omit in toc -->
 
 El proyecto fue desarrollado en 4 Sprints reales siguiendo buenas prácticas de configuración declarativa en Salesforce:
-- [📁 ETAPA 0: Enunciado del problema](#enunciado-del-problema)
+- [ETAPA 0: Enunciado del problema](#enunciado-del-problema)
   - [Descripción del Proyecto](#descripción-del-proyecto)
   - [Levantamiento de requerimientos](#levantamiento-de-requerimientos)
-- [📁 ETAPA 1: Construcción en Developer Org](#construcción-en-developer-org)
-
+- [ETAPA 1: Construcción en Developer Org](#construcción-en-developer-org)
+- [ETAPA 2: Migración, calidad de datos y reportería](#construcción-en-developer-org)
+- [ETAPA 3: Automatización y reportería](#construcción-en-developer-org)
+- [ETAPA 4: Portal Experience Cloud](#construcción-en-developer-org)
+  
 <br>
   
 ## 📁**ETAPA 0: Enunciado del problema**
