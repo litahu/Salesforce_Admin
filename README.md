@@ -1,11 +1,15 @@
 # **"VitalCore CRM - Implementación Salesforce**
 
+#### **📋 Stack Tecnológico**
+**Salesforce Sales Cloud** : [Object Manger, Lightning App Builder, Profile Manager, Page Layout Editor, Flow Builder, Data Loader, Report Builder y Themes & Branding](https://www.salesforce.com/trailblazer/litahume)<br> 
+**Salesforce Experience Cloud** : [Experience Builder, Salesforce Knowledge, Guest User Profile, Omnicanalidad y Screen Flow público integrado al portal](https://trailhead.salesforce.com/es-MX/content/learn/projects/build-a-community-with-knowledge-and-chat)
 **Viewer** : [Relevamiento](https://vita-murex.vercel.app/)<br>
 
 <br>
 
-**Proyecto de automatización y digitalización comercial para VitaCore Labs** <br>
-El proyecto fue desarrollado en 4 Sprints reales, gestionando requerimientos del cliente, construyendo soluciones de extremo a extremo y siguiendo buenas prácticas de configuración declarativa en Salesforce.
+#### **📋 Descripción del Proyecto**
+Proyecto de implementación de Salesforce CRM para VitaCore Labs, un laboratorio farmacéutico B2B con equipo de visitadores médicos que gestiona relaciones comerciales con hospitales, clínicas y médicos especialistas.
+El proyecto fue desarrollado en 4 Sprints reales, gestionando requerimientos del cliente, construyendo soluciones de extremo a extremo y siguiendo buenas prácticas de configuración declarativa en Salesforce
 
 ```
 Industria
@@ -41,7 +45,8 @@ Se realizo un levantamiento de requerimientos en historias de usuario, para la g
   <kbd> <img width="800" alt="eer" src="https://github.com/litahu/Seguimiento_de_ventas/blob/main/Assets/final_inform.PNG"></kbd> <br>
 </p>
 
-
+#### **Modelado de datos**
+```
 Account (Hospital / Clínica)
 │
 ├── Contact (Médico Especialista)
@@ -60,7 +65,7 @@ Account (Hospital / Clínica)
       ├── Nombre_Comercial__c (text)
       ├── Categoria__c (picklist)
       └── Principio_Activo__c (text)
-
+```
 
 
 
