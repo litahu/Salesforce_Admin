@@ -144,9 +144,8 @@ Lideré la definición de historias de usuario para implementar soluciones end-t
 ```  
 
 </details>
-<br>
- 
 
+ 
 ### Sprint 2 — Carga Masiva de Datos y Automatización
 
 <details>
