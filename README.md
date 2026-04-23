@@ -44,12 +44,11 @@ con Screen Flows y Flow Builder, carga masiva de datos históricos, tableros de 
 #### **🎫 Levantamiento de requerimientos**
 Lideré la definición de historias de usuario para implementar soluciones end-to-end bajo un enfoque ágil
 
+
+**Sprint 1 — Identidad, Modelo de Datos y Gestión de Usuarios**
 ---
 
-### 🔵 Sprint 1 — Identidad, Modelo de Datos y Gestión de Usuarios
-
 #### Épica 1: Identidad y Experiencia VitaCore CRM
-
 ---
 
 **HU-01: App personalizada VitaCore CRM**
@@ -136,8 +135,11 @@ Lideré la definición de historias de usuario para implementar soluciones end-t
 **🛠️ Herramientas utilizadas:** Lightning App Builder · Profile Manager · Object Manager · Page Layout Editor · Themes & Branding · Role Hierarchy
 
 ---
+ 
+<br>
+ 
 
-### 🟠 Sprint 2 — Carga Masiva de Datos y Automatización
+### Sprint 2 — Carga Masiva de Datos y Automatización
 
 #### Épica 3: Migración Masiva de Datos Históricos
 
@@ -217,8 +219,10 @@ Lideré la definición de historias de usuario para implementar soluciones end-t
 **🛠️ Herramientas utilizadas:** Data Loader · Screen Flow · Record-Triggered Flow · Scheduled Flow · Matching Rules · Duplicate Rules
 
 ---
-
-### 🟢 Sprint 3 — Reportes y Tableros de Gestión
+ 
+<br>
+ 
+### Sprint 3 — Reportes y Tableros de Gestión
 
 #### Épica 5: Inteligencia Comercial — Reportes y Tableros
 
@@ -267,8 +271,10 @@ Lideré la definición de historias de usuario para implementar soluciones end-t
 **🛠️ Herramientas utilizadas:** Report Builder · Dashboard Builder · Report Types personalizados · Filtros de reporte · Sharing Settings
 
 ---
-
-### 🟣 Sprint 4 — Portal Interactivo en Experience Cloud
+ 
+<br>
+ 
+### Sprint 4 — Portal Interactivo en Experience Cloud
 
 #### Épica 6: Portal del Paciente en Experience Cloud
 
