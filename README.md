@@ -8,8 +8,7 @@ Este proyecto demuestra el ciclo completo de una implementación Salesforce: des
 - **Salesforce Experience Cloud** : Experience Builder, Salesforce Knowledge, Guest User Profile, Omnicanalidad y Screen Flow público integrado al portal. [Ver](https://trailhead.salesforce.com/es-MX/content/learn/projects/build-a-community-with-knowledge-and-chat)<br>
 
 - **Viewer** : Relevo de requerimientos junto a áreas comerciales y técnicas.[Ver](https://vita-murex.vercel.app/)<br>
-  
-<br>
+
   
 ### Tabla de contenido <!-- omit in toc -->
 
@@ -17,8 +16,8 @@ El proyecto fue desarrollado en 4 Sprints reales siguiendo buenas prácticas de 
 - [ETAPA 0: Enunciado del problema](https://github.com/litahu/Salesforce_Admin?tab=readme-ov-file#etapa-0-enunciado-del-problema)
   - [Descripción del Proyecto](https://github.com/litahu/Salesforce_Admin?tab=readme-ov-file#descripción-del-proyecto)
   - [Levantamiento de requerimientos](https://github.com/litahu/Salesforce_Admin?tab=readme-ov-file#levantamiento-de-requerimientos)
-- [ETAPA 1: Construcción en Developer Org](https://github.com/litahu/Salesforce_Admin?tab=readme-ov-file#etapa-1:-construcción-en-developer-org)
-- [ETAPA 2: Migración, calidad de datos y reportería](https://github.com/litahu/Salesforce_Admin?tab=readme-ov-file#etapa-2:-migración,-calidad-de-datos-y-reportería)
+- [ETAPA 1: Construcción en Developer Org](https://github.com/litahu/Salesforce_Admin?tab=readme-ov-file#etapa-1-construcción-en-developer-org)
+- [ETAPA 2: Migración, calidad de datos y reportería](https://github.com/litahu/Salesforce_Admin?tab=readme-ov-file#etapa-2-migración,-calidad-de-datos-y-reportería)
 - [ETAPA 3: Automatización y reportería](https://github.com/litahu/Salesforce_Admin?tab=readme-ov-file#etapa-3-automatización-y-reportería)
 - [ETAPA 4: Portal Experience Cloud](https://github.com/litahu/Salesforce_Admin?tab=readme-ov-file#etapa-4-portal-experience-cloud)
   
