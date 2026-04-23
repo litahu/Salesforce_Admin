@@ -88,8 +88,14 @@ Account (Hospital / Clínica)
   <kbd> <img width="800" alt="eer" src="https://github.com/litahu/Salesforce_Admin/blob/main/resource_sfadmin/sprint4_adminforce.PNG"></kbd> <br>
 </p>
 
+<br>
 
+### **🏆 Impacto del Proyecto** <br>
+- **1000+** : Registros históricos migrados con Data Import Wizard en carga masiva automatizada. 
+- **360** : Visibilidad comercial en tiempo real para la dirección ejecutiva.
+- **Reducción de 25 % en los tiempos de operación** : Eliminé tareas manuales del equipo de campo a través de 3 Flujos automáticos. 
 
-
+### **Agradecimiento** <br>
+- **Salesforce Sales Cloud** : Object Manger, Lightning App Builder, Profile Manager, Page Layout Editor, Flow Builder, Data Loader, Report Builder y Themes & Branding.
 
 
