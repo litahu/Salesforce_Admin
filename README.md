@@ -1,8 +1,8 @@
-# **"VitalCore CRM - Implementación Salesforce**
+# **"VitalCore CRM" - Implementación Salesforce**
 
-#### **📋 Stack Tecnológico**
-**Salesforce Sales Cloud** : [Object Manger, Lightning App Builder, Profile Manager, Page Layout Editor, Flow Builder, Data Loader, Report Builder y Themes & Branding](https://www.salesforce.com/trailblazer/litahume)<br> 
-**Salesforce Experience Cloud** : [Experience Builder, Salesforce Knowledge, Guest User Profile, Omnicanalidad y Screen Flow público integrado al portal](https://trailhead.salesforce.com/es-MX/content/learn/projects/build-a-community-with-knowledge-and-chat)
+#### **Stack Tecnológico** <br>
+**Salesforce Sales Cloud** : Object Manger, Lightning App Builder, Profile Manager, Page Layout Editor, Flow Builder, Data Loader, Report Builder y Themes & Branding. [Ver](https://www.salesforce.com/trailblazer/litahume)<br> 
+**Salesforce Experience Cloud** : Experience Builder, Salesforce Knowledge, Guest User Profile, Omnicanalidad y Screen Flow público integrado al portal. [Ver](https://trailhead.salesforce.com/es-MX/content/learn/projects/build-a-community-with-knowledge-and-chat)<br>
 **Viewer** : [Relevamiento](https://vita-murex.vercel.app/)<br>
 
 <br>
