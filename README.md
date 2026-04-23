@@ -3,7 +3,6 @@
 Este proyecto demuestra el ciclo completo de una implementación Salesforce: desde el levantamiento de requerimientos y el modelado de datos, hasta la automatización de procesos, la inteligencia comercial con reportes y tableros, y la apertura al mundo exterior mediante un portal interactivo en Experience Cloud para VitaCore Labs.<br>
 
 ## **🧰 Stack Tecnológico aplicados** <br>
----
 - **Salesforce Sales Cloud** : Object Manger, Lightning App Builder, Profile Manager, Page Layout Editor, Flow Builder, Data Loader, Report Builder y Themes & Branding. [Ver](https://www.salesforce.com/trailblazer/litahume)<br>
 
 - **Salesforce Experience Cloud** : Experience Builder, Salesforce Knowledge, Guest User Profile, Omnicanalidad y Screen Flow público integrado al portal. [Ver](https://trailhead.salesforce.com/es-MX/content/learn/projects/build-a-community-with-knowledge-and-chat)<br>
@@ -99,23 +98,20 @@ Account (Hospital / Clínica)
 
 <br>
 
-### **🏆 Impacto del Proyecto** <br>
----
+## **🏆 Impacto del Proyecto** <br>
 - **1000+** : Registros históricos migrados con Data Import Wizard en carga masiva automatizada. 
 - **360** : Visibilidad comercial en tiempo real para la dirección ejecutiva.
 - **Reducción de 25 % en los tiempos de operación** : Eliminé tareas manuales del equipo de campo a través de 3 Flujos automáticos. 
 
 <br>
   
-### **✒ Autor** <br>
----
+## **✒ Autor** <br>
 **Licencia** : Este proyecto está bajo la Licencia (Lita's Project).
 * **Lita Huánuco Medina** -  [Lita Hume](https://www.linkedin.com/in/litahumedata/)
 
 <br>
   
-### **🎁 Expresiones de Gratitud** <br>
----
+## **🎁 Expresiones de Gratitud** <br>
 - **Guayerd y Cooperación Alemana** : Mi profundo agradecimiento por la oportunidad de formación y por brindarme las herramientas técnicas para dominar el ecosistema de Salesforce. Gracias a su apoyo, hoy manejo con confianza herramientas como Object Manager, Lightning App Builder, Flow Builder, Data Loader y la creación de reportes y tableros personalizados. Estas competencias han sido el motor de mi evolución en el ecosistema Salesforce. Infinitas gracias 🤍<br>
   
 - **Mentores** : Un agradecimiento especial a **Anita, Rebeca y Pablo**, quienes me guiaron con paciencia y sabiduría para levantar este proyecto desde sus cimientos, ¡Lo logramos! Sus consejos fueron la brújula en los momentos de duda, recordándome siempre una máxima: "Confíen en el proceso". Mis mejores deseos en todos sus emprendimientos ✨<br>
