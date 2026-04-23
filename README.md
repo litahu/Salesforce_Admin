@@ -22,23 +22,24 @@ relaciones comerciales con hospitales, clínicas y médicos especialistas.
 ```
 El Desafío
 Operación dispersa, sin visibilidad ni automatización
-El cliente necesitaba centralizar la gestión comercial, eliminar el registro manual <br>
-de visitas médicas y obtener visibilidad en tiempo real sobre el desempeño del equipo <br>
- de campo y la cobertura de médicos.
+El cliente necesitaba centralizar la gestión comercial, eliminar el registro manual de visitas médicas
+y obtener visibilidad en tiempo real sobre el desempeño del equipo de campo y la cobertura de médicos.
 ```
 
 ```
 La Solución
 CRM personalizado + Experience Cloud para autoservicio
-Implementación de Sales Cloud con objetos personalizados para visitas médicas, <br>
-automatización de flujos con Screen Flows y Flow Builder, carga masiva de datos históricos, <br>
-tableros de gestión y un portal interactivo para pacientes en Experience Cloud.
+Implementación de Sales Cloud con objetos personalizados para visitas médicas, automatización de flujos
+con Screen Flows y Flow Builder, carga masiva de datos históricos, tableros de gestión y un portal
+ interactivo para pacientes en Experience Cloud.
 ```
 
+## 📁**ETAPA 1: Toma de  requerimientos**
+Se realizo un levantamiento de requerimientos en historias de usuario, para la gestion de la solución en metodologias agiles
 
-
-
-
+<p align="center">
+  <kbd> <img width="800" alt="eer" src="https://github.com/litahu/Seguimiento_de_ventas/blob/main/Assets/final_inform.PNG"></kbd> <br>
+</p>
 
 
 Account (Hospital / Clínica)
