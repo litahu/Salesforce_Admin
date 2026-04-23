@@ -10,15 +10,14 @@ El proyecto fue desarrollado en 4 Sprints reales, gestionando requerimientos del
 ```
 Industria
 Sector Salud — Laboratorio Farmacéutico B2B
-VitaCore Labs es un laboratorio farmacéutico que opera con un equipo de visitadores <br>
-médicos responsables de gestionar relaciones con clínicas, hospitales y médicos especialistas <br>
-a lo largo del territorio.
+VitaCore Labs es un laboratorio farmacéutico que opera con un equipo de visitadores médicos responsables
+de gestionar relaciones con clínicas, hospitales y médicos especialistas a lo largo del territorio.
 ```
 
 ## 📁**ETAPA 0: Enunciado del problema**
 
-VitaCore Labs es un laboratorio farmacéutico B2B con equipo de visitadores médicos <br>
-que gestiona relaciones comerciales con hospitales, clínicas y médicos especialistas.
+VitaCore Labs es un laboratorio farmacéutico B2B con equipo de visitadores médicos que gestiona
+relaciones comerciales con hospitales, clínicas y médicos especialistas.
 
 ```
 El Desafío
