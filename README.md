@@ -2,7 +2,8 @@
 
 Este proyecto demuestra el ciclo completo de una implementación Salesforce: desde el levantamiento de requerimientos y el modelado de datos, hasta la automatización de procesos, la inteligencia comercial con reportes y tableros, y la apertura al mundo exterior mediante un portal interactivo en Experience Cloud para VitaCore Labs.<br>
 
-#### **🧰 Stack Tecnológico aplicados** <br>
+## **🧰 Stack Tecnológico aplicados** <br>
+---
 - **Salesforce Sales Cloud** : Object Manger, Lightning App Builder, Profile Manager, Page Layout Editor, Flow Builder, Data Loader, Report Builder y Themes & Branding. [Ver](https://www.salesforce.com/trailblazer/litahume)<br>
 
 - **Salesforce Experience Cloud** : Experience Builder, Salesforce Knowledge, Guest User Profile, Omnicanalidad y Screen Flow público integrado al portal. [Ver](https://trailhead.salesforce.com/es-MX/content/learn/projects/build-a-community-with-knowledge-and-chat)<br>
@@ -12,6 +13,8 @@ Este proyecto demuestra el ciclo completo de una implementación Salesforce: des
 El proyecto fue desarrollado en 4 Sprints reales siguiendo buenas prácticas de configuración declarativa en Salesforce:
 <br>
 
+<br>
+  
 ## 📁**ETAPA 0: Enunciado del problema**
 
 #### **📋 Descripción del Proyecto**
@@ -37,7 +40,8 @@ con Screen Flows y Flow Builder, carga masiva de datos históricos, tableros de 
 Lideré la definición de historias de usuario para implementar soluciones end-to-end bajo un enfoque ágil
 
 
-
+<br>
+  
 ## 📁**ETAPA 1: Construcción en Developer Org**
 
 #### **Modelado de datos**
@@ -67,7 +71,8 @@ Account (Hospital / Clínica)
   <kbd> <img width="800" alt="eer" src="https://github.com/litahu/Salesforce_Admin/blob/main/resource_sfadmin/sprint1_adminsales.PNG"></kbd> <br>
 </p>
 
-
+<br>
+  
 ## 📁**ETAPA 2: Migración, calidad de datos y reportería**
 
 
@@ -75,6 +80,8 @@ Account (Hospital / Clínica)
   <kbd> <img width="800" alt="eer" src="https://github.com/litahu/Salesforce_Admin/blob/main/resource_sfadmin/sprint_2_sales_admin.PNG"></kbd> <br>
 </p>
 
+<br>
+  
 ## 📁**ETAPA 3: Automatización y reportería**
 
 
@@ -82,6 +89,8 @@ Account (Hospital / Clínica)
   <kbd> <img width="800" alt="eer" src="https://github.com/litahu/Salesforce_Admin/blob/main/resource_sfadmin/sprint3_adminsales.PNG"></kbd> <br>
 </p>
 
+<br>
+  
 ## 📁**ETAPA 4: Portal Experience Cloud**
 
 <p align="center">
@@ -96,7 +105,8 @@ Account (Hospital / Clínica)
 - **360** : Visibilidad comercial en tiempo real para la dirección ejecutiva.
 - **Reducción de 25 % en los tiempos de operación** : Eliminé tareas manuales del equipo de campo a través de 3 Flujos automáticos. 
 
-
+<br>
+  
 ### **✒ Autor** <br>
 ---
 **Licencia** : Este proyecto está bajo la Licencia (Lita's Project).
