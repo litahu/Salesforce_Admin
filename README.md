@@ -1,10 +1,13 @@
 # **"VitalCore CRM" - Implementación Salesforce**
 
+Este proyecto demuestra el ciclo completo de una implementación Salesforce: desde el levantamiento de requerimientos y el modelado de datos, hasta la automatización de procesos, la inteligencia comercial con reportes y tableros, y la apertura al mundo exterior mediante un portal interactivo en Experience Cloud para VitaCore Labs.<br>
+
+El proyecto fue desarrollado en 4 Sprints reales siguiendo buenas prácticas de configuración declarativa en Salesforce.
+
 #### **🧰 Stack Tecnológico aplicados** <br>
 - **Salesforce Sales Cloud** : Object Manger, Lightning App Builder, Profile Manager, Page Layout Editor, Flow Builder, Data Loader, Report Builder y Themes & Branding. [Ver](https://www.salesforce.com/trailblazer/litahume)<br>
 
 - **Salesforce Experience Cloud** : Experience Builder, Salesforce Knowledge, Guest User Profile, Omnicanalidad y Screen Flow público integrado al portal. [Ver](https://trailhead.salesforce.com/es-MX/content/learn/projects/build-a-community-with-knowledge-and-chat)<br>
-<br>
 
 - **Viewer** : Relevo de requerimientos junto a áreas comerciales y técnicas.[Ver](https://vita-murex.vercel.app/)<br>
 
@@ -13,7 +16,7 @@
 
 #### **📋 Descripción del Proyecto**
 Proyecto de implementación de Salesforce CRM para VitaCore Labs, un laboratorio farmacéutico B2B con equipo de visitadores médicos que gestiona relaciones comerciales con hospitales, clínicas y médicos especialistas.
-El proyecto fue desarrollado en 4 Sprints reales, gestionando requerimientos del cliente, construyendo soluciones de extremo a extremo y siguiendo buenas prácticas de configuración declarativa en Salesforce
+
 
 ```
 Industria
@@ -42,8 +45,8 @@ con Screen Flows y Flow Builder, carga masiva de datos históricos, tableros de 
  interactivo para pacientes en Experience Cloud.
 ```
 
-## 📁**ETAPA 1: Toma de  requerimientos**
-Se realizo un levantamiento de requerimientos en historias de usuario, para la gestion de la solución en metodologias agiles
+## 📁**ETAPA 1: Levantamiento de requerimientos**
+Gestioné requerimientos del cliente, construyendo soluciones de extremo a extremo en metodologias agiles. Declarativa en Salesforces en historias de usuario, para la gestion de la solución en metodologias agiles
 
 <p align="center">
   <kbd> <img width="800" alt="eer" src="https://github.com/litahu/Seguimiento_de_ventas/blob/main/Assets/final_inform.PNG"></kbd> <br>
