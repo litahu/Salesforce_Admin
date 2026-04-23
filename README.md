@@ -2,8 +2,6 @@
 
 Este proyecto demuestra el ciclo completo de una implementación Salesforce: desde el levantamiento de requerimientos y el modelado de datos, hasta la automatización de procesos, la inteligencia comercial con reportes y tableros, y la apertura al mundo exterior mediante un portal interactivo en Experience Cloud para VitaCore Labs.<br>
 
-El proyecto fue desarrollado en 4 Sprints reales siguiendo buenas prácticas de configuración declarativa en Salesforce.
-
 #### **🧰 Stack Tecnológico aplicados** <br>
 - **Salesforce Sales Cloud** : Object Manger, Lightning App Builder, Profile Manager, Page Layout Editor, Flow Builder, Data Loader, Report Builder y Themes & Branding. [Ver](https://www.salesforce.com/trailblazer/litahume)<br>
 
@@ -11,24 +9,14 @@ El proyecto fue desarrollado en 4 Sprints reales siguiendo buenas prácticas de 
 
 - **Viewer** : Relevo de requerimientos junto a áreas comerciales y técnicas.[Ver](https://vita-murex.vercel.app/)<br>
 
+El proyecto fue desarrollado en 4 Sprints reales siguiendo buenas prácticas de configuración declarativa en Salesforce:
 <br>
-<br>
-
-#### **📋 Descripción del Proyecto**
-Proyecto de implementación de Salesforce CRM para VitaCore Labs, un laboratorio farmacéutico B2B con equipo de visitadores médicos que gestiona relaciones comerciales con hospitales, clínicas y médicos especialistas.
-
-
-```
-Industria
-Sector Salud — Laboratorio Farmacéutico B2B
-VitaCore Labs es un laboratorio farmacéutico que opera con un equipo de visitadores médicos responsables
-de gestionar relaciones con clínicas, hospitales y médicos especialistas a lo largo del territorio.
-```
 
 ## 📁**ETAPA 0: Enunciado del problema**
 
-VitaCore Labs es un laboratorio farmacéutico B2B con equipo de visitadores médicos que gestiona
-relaciones comerciales con hospitales, clínicas y médicos especialistas.
+#### **📋 Descripción del Proyecto**
+VitaCore Labs es un laboratorio farmacéutico B2B que opera con un equipo de visitadores médicos que gestiona relaciones comerciales con hospitales, clínicas y médicos especialistas.
+**Industria** : Sector salud
 
 ```
 El Desafío
@@ -45,12 +33,12 @@ con Screen Flows y Flow Builder, carga masiva de datos históricos, tableros de 
  interactivo para pacientes en Experience Cloud.
 ```
 
-## 📁**ETAPA 1: Levantamiento de requerimientos**
-Gestioné requerimientos del cliente, construyendo soluciones de extremo a extremo en metodologias agiles. Declarativa en Salesforces en historias de usuario, para la gestion de la solución en metodologias agiles
+#### **🎫 Levantamiento de requerimientos**
+Lideré la definición de historias de usuario para implementar soluciones end-to-end bajo un enfoque ágil
 
-<p align="center">
-  <kbd> <img width="800" alt="eer" src="https://github.com/litahu/Seguimiento_de_ventas/blob/main/Assets/final_inform.PNG"></kbd> <br>
-</p>
+
+
+## 📁**ETAPA 1: Construcción en Developer Org**
 
 #### **Modelado de datos**
 ```
@@ -73,6 +61,35 @@ Account (Hospital / Clínica)
       ├── Categoria__c (picklist)
       └── Principio_Activo__c (text)
 ```
+
+
+<p align="center">
+  <kbd> <img width="800" alt="eer" src="https://github.com/litahu/Salesforce_Admin/blob/main/resource_sfadmin/sprint1_adminsales.PNG"></kbd> <br>
+</p>
+
+
+## 📁**ETAPA 2: Migración, calidad de datos y reportería**
+
+
+<p align="center">
+  <kbd> <img width="800" alt="eer" src="https://github.com/litahu/Salesforce_Admin/blob/main/resource_sfadmin/sprint_2_sales_admin.PNG"></kbd> <br>
+</p>
+
+## 📁**ETAPA 3: Automatización y reportería**
+
+
+<p align="center">
+  <kbd> <img width="800" alt="eer" src="https://github.com/litahu/Salesforce_Admin/blob/main/resource_sfadmin/sprint3_adminsales.PNG"></kbd> <br>
+</p>
+
+## 📁**ETAPA 4: Portal Experience Cloud**
+
+<p align="center">
+  <kbd> <img width="800" alt="eer" src="https://github.com/litahu/Salesforce_Admin/blob/main/resource_sfadmin/sprint4_adminforce.PNG"></kbd> <br>
+</p>
+
+
+
 
 
 
