@@ -9,8 +9,13 @@ Este proyecto demuestra el ciclo completo de una implementación Salesforce: des
 
 - **Viewer** : Relevo de requerimientos junto a áreas comerciales y técnicas.[Ver](https://vita-murex.vercel.app/)<br>
 
+## Tabla de contenido <!-- omit in toc -->
+
 El proyecto fue desarrollado en 4 Sprints reales siguiendo buenas prácticas de configuración declarativa en Salesforce:
-<br>
+- [📁 ETAPA 0: Enunciado del problema](#enunciado-del-problema)
+  - [Descripción del Proyecto](#descripción-del-proyecto)
+  - [Levantamiento de requerimientos](#levantamiento-de-requerimientos)
+- [📁 ETAPA 1: Construcción en Developer Org](#construcción-en-developer-org)
 
 <br>
   
