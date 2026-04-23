@@ -19,7 +19,9 @@ El proyecto fue desarrollado en 4 Sprints reales siguiendo buenas prácticas de 
 - [ETAPA 2: Migración, calidad de datos y reportería](https://github.com/litahu/Salesforce_Admin?tab=readme-ov-file#etapa-2-migración,-calidad-de-datos-y-reportería)
 - [ETAPA 3: Automatización y reportería](https://github.com/litahu/Salesforce_Admin?tab=readme-ov-file#etapa-3-automatización-y-reportería)
 - [ETAPA 4: Portal Experience Cloud](https://github.com/litahu/Salesforce_Admin?tab=readme-ov-file#etapa-4-portal-experience-cloud)
- 
+
+<br>
+   
 ## 📁**ETAPA 0: Enunciado del problema**
 
 #### **📋 Descripción del Proyecto**
@@ -46,6 +48,12 @@ Lideré la definición de historias de usuario para implementar soluciones end-t
 
 
 ### Sprint 1 — Identidad, Modelo de Datos y Gestión de Usuarios
+
+<details>
+  <summary> Haga clic para ver la consulta </summary>
+    <br> 
+
+```
 
 #### Épica 1: Identidad y Experiencia VitaCore CRM
 
@@ -135,7 +143,9 @@ Lideré la definición de historias de usuario para implementar soluciones end-t
 **🛠️ Herramientas utilizadas:** Lightning App Builder · Profile Manager · Object Manager · Page Layout Editor · Themes & Branding · Role Hierarchy
 
 ---
- 
+```  
+
+</details>
 <br>
  
 
