@@ -48,7 +48,7 @@ Lideré la definición de historias de usuario para implementar soluciones end-t
 ### Sprint 1 — Identidad, Modelo de Datos y Gestión de Usuarios
 
 <details>
-  <summary> Haga clic para ver la consulta </summary>
+  <summary> Haga clic para ver las HU </summary>
     <br> 
 
 ```
@@ -149,7 +149,7 @@ Lideré la definición de historias de usuario para implementar soluciones end-t
 ### Sprint 2 — Carga Masiva de Datos y Automatización
 
 <details>
-  <summary> Haga clic para ver la consulta </summary>
+  <summary> Haga clic para ver las HU </summary>
     <br> 
 
 ```
@@ -238,7 +238,7 @@ Lideré la definición de historias de usuario para implementar soluciones end-t
 ### Sprint 3 — Reportes y Tableros de Gestión
 
 <details>
-  <summary> Haga clic para ver la consulta </summary>
+  <summary> Haga clic para ver las HU </summary>
     <br> 
 
 ```
@@ -295,7 +295,7 @@ Lideré la definición de historias de usuario para implementar soluciones end-t
 
 ### Sprint 4 — Portal Interactivo en Experience Cloud
 <details>
-  <summary> Haga clic para ver la consulta </summary>
+  <summary> Haga clic para ver las HU </summary>
     <br> 
 
 ```
