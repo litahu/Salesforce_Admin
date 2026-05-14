@@ -444,7 +444,7 @@ Account (Hospital / Clínica)
   
 - **Mentores** : Un agradecimiento especial a **Anita, Rebeca y Pablo**, quienes me guiaron con paciencia y sabiduría para levantar este proyecto desde sus cimientos, ¡Se logró! Sus consejos fueron la brújula en los momentos de duda, recordándome siempre una máxima: "Confíen en el proceso". Mis mejores deseos en todos sus emprendimientos ✨<br>
   
-- **Familia** : Gracias por ser mi soporte incondicional y mi fuente de motivación. Su paciencia durante las horas de estudio y su fe en mis capacidades fueron el combustible necesario para llegar a la meta. Este logro es tan mío como de ustedes ❤ <br>
+- **Familia** : Gracias por ser mi soporte incondicional y mi fuente de motivación. Su paciencia durante las horas de estudio y su fé en mis capacidades fueron el combustible necesario para llegar a la meta. Este logro es tan mío como de ustedes ❤ <br>
 
 Gracias por leer hasta el final! 📢
 
