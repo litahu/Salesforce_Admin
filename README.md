@@ -440,9 +440,9 @@ Account (Hospital / Clínica)
 <br>
   
 ## **🎁 Expresiones de Gratitud** <br>
-- **Guayerd y Cooperación Alemana** : Mi profundo agradecimiento por la oportunidad de formación y por brindarme las herramientas técnicas para dominar el ecosistema de Salesforce. Gracias a su apoyo, hoy manejo con confianza herramientas como Object Manager, Lightning App Builder, Flow Builder, Data Import Wizard, dashboard y chatter in real time. Estas competencias han sido el motor de mi evolución en el ecosistema Salesforce. Infinitas gracias 🤍<br>
+- **Guayerd y Cooperación Alemana** : Mi profundo agradecimiento por la oportunidad de formación y por brindarme las herramientas técnicas para dominar el ecosistema de Salesforce. Gracias a su apoyo, hoy manejo con confianza herramientas como Object Manager, Lightning App Builder, Flow Builder, Data Import Wizard, Dashboard y Chat Híbrido(Chatbot + Chatlive con agente). Estas competencias han sido el motor de mi evolución en el ecosistema Salesforce. Infinitas gracias 🤍<br>
   
-- **Mentores** : Un agradecimiento especial a **Anita, Rebeca y Pablo**, quienes me guiaron con paciencia y sabiduría para levantar este proyecto desde sus cimientos, ¡Lo logramos! Sus consejos fueron la brújula en los momentos de duda, recordándome siempre una máxima: "Confíen en el proceso". Mis mejores deseos en todos sus emprendimientos ✨<br>
+- **Mentores** : Un agradecimiento especial a **Anita, Rebeca y Pablo**, quienes me guiaron con paciencia y sabiduría para levantar este proyecto desde sus cimientos, ¡Se logró! Sus consejos fueron la brújula en los momentos de duda, recordándome siempre una máxima: "Confíen en el proceso". Mis mejores deseos en todos sus emprendimientos<br>
   
 - **Familia** : Gracias por ser mi soporte incondicional y mi fuente de motivación. Su paciencia durante las horas de estudio y su fe en mis capacidades fueron el combustible necesario para llegar a la meta. Este logro es tan mío como de ustedes ❤ <br>
 
