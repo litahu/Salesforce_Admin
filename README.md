@@ -1,7 +1,7 @@
 # 💊 **"VitalCore CRM" - Implementación Salesforce**
 
 ### **Construido con 🛠️** <br>
-- **Viewer** : Relevo de requerimientos junto a áreas comerciales y técnicas. [Ver](https://vita-murex.vercel.app/)<br>
+- **Analítica de requisitos** : Prototipo de requerimientos para el área comercial y técnica. [Ver](https://github.com/litahu/Salesforce_Admin/blob/main/resource_sfadmin/Primer_prototipo.pdf)<br>
 - **Salesforce Sales Cloud** : Object Manger, Lightning App Builder, Profile Manager, Page Layout Editor, Flow Builder, Data Loader, Report Builder y Themes & Branding. [Ver](https://www.salesforce.com/trailblazer/litahume)<br>
 - **Salesforce Experience Cloud** : Experience Builder, Salesforce Knowledge, Guest User Profile, Omnicanalidad y Screen Flow público integrado al portal. [Ver](https://trailhead.salesforce.com/es-MX/content/learn/projects/build-a-community-with-knowledge-and-chat)<br>
  
